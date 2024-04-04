@@ -11,7 +11,7 @@ const router = express.Router();
 // get /api/users/profile - get user profile
 // put /api/users/profile - update profile
 
-router.post('/', registerUser);
+router.post('/register', registerUser);
 router.post('/auth', authUser);
 router.post('/logout', logoutUser);
 router.route('/profile').get(getUserProfile).put(getUserProfile);
