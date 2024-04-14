@@ -19,9 +19,9 @@ const Header = () => {
                             <FaSignInAlt/>Sign In
                             </Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to={'/signOut'}>
+                        <LinkContainer to={'/register'}>
                             <Nav.Link>
-                                <FaSignOutAlt/>Sign Out
+                                <FaSignOutAlt/>Sign up
                             </Nav.Link> 
                         </LinkContainer>
                     </Nav>
