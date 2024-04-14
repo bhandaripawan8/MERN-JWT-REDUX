@@ -4,7 +4,7 @@ import asyncHandler from 'express-async-handler';
 import User from '../models/userModel.js'
 import { runInNewContext } from 'vm';
 
-const protect = asyncHandler(async() =>{
+const Protect = asyncHandler(async() =>{
     let token;
     token = req.cookies.jwt;
     if(token){
@@ -23,4 +23,4 @@ const protect = asyncHandler(async() =>{
     }
 })
 
-export {protect};
+export default {Protect};

@@ -8,16 +8,22 @@ const Header = () => {
     <header>
         <Navbar bg='dark' variant='dark' expand= 'lg' collapseOnSelect>
             <Container>
-                <Navbar.Brand href='/'>MERN Auth</Navbar.Brand>
+                <LinkContainer to={'/'}>
+                    <Navbar.Brand>MERN Auth</Navbar.Brand>
+                </LinkContainer>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='ms-auto'>
-                           <Nav.Link href='/login'>
+                        <LinkContainer to={'/signIn'}>
+                           <Nav.Link>
                             <FaSignInAlt/>Sign In
                             </Nav.Link>
-                            <Nav.Link href='/register'>
+                        </LinkContainer>
+                        <LinkContainer to={'/register'}>
+                            <Nav.Link>
                                 <FaSignOutAlt/>Sign Out
                             </Nav.Link> 
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
