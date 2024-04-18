@@ -5,14 +5,13 @@ import {useDispatch, useSelector} from 'react-redux'
 import FormContainer from '../components/FormContainer'
 import { useLoginMutation } from "../slices/usersApiSlice";
 import {setCredentials} from '../slices/authSlice';
+import {toast} from 'react-toastify';
 
 const LoginScreen = () => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
     const [login, {isLoading}] = useLoginMutation()
-
     const {userinfo} = useSelector((state) => state.auth);
     
     useEffect(() =>{
@@ -30,7 +29,7 @@ const LoginScreen = () => {
             dispatch(setCredentials({...res}));
             navigate('/')
         } catch (error) {
-            console.log(error?.data?.message || error.error)
+            toast.error(error?.data?.message || error.error)
         }
     }
 
