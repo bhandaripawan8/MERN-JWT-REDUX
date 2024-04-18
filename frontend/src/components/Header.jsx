@@ -61,7 +61,6 @@ const Header = () => {
                             </LinkContainer>
                             </>
                         )}
-                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>
