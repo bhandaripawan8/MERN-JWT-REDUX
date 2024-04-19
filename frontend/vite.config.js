@@ -9,8 +9,8 @@ export default defineConfig({
     // proxy is important as front end and back end have different domain, 5000 for backend, what proxy does is, whenever /api hits it will target the url as mentioned below.
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
-        changeOrigin: true
+        target: 'http://localhost:3000',
+        changeOrigin: true,
       }
     }
   }

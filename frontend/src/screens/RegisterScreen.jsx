@@ -54,11 +54,11 @@ const RegisterScreen = () => {
                 </Form.Group>
                 <Form.Group className="my-2" controlId="password">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Enter the password here..." value={password} onChange={e => setPassword(e.target.value)}></Form.Control>
+                    <Form.Control type="password"  value={password} onChange={e => setPassword(e.target.value)}></Form.Control>
                 </Form.Group>
                 <Form.Group className="my-2" controlId="confirmedPassword">
                     <Form.Label>Confirm password</Form.Label>
-                    <Form.Control type="password" placeholder="Enter the password here..." value={confirmedPassword} onChange={e => setConfirmedPassword(e.target.value)}></Form.Control>
+                    <Form.Control type="password" value={confirmedPassword} onChange={e => setConfirmedPassword(e.target.value)}></Form.Control>
                 </Form.Group>
 
                 {isLoading && <Loader/>}
